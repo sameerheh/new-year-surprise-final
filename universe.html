@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>Universe</title><link rel="stylesheet" href="css/style.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Universe</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body class="page3">
 
-<video class="bg-video" autoplay muted loop playsinline>
-  <source src="assets/video/love-video.mp4">
+<!-- Background Video (Render Safe) -->
+<video
+  class="bg-video"
+  muted
+  playsinline
+  preload="metadata"
+  poster="assets/images/hello-kitty/kitty1.gif"
+>
+  <source src="assets/video/love-video.mp4" type="video/mp4">
 </video>
 
+<!-- Letter Box -->
 <div class="letter-box">
   <div class="letter-paper">
     <p class="letter-font">
       Dear sanikaa...<br><br>
-      Heyaaaa bubuuu merii ladduu 💕 happyyyyy newww yearrrr babeeee 💞 hehehehehehehehe hihihihi i want to tell youu smthing smthin likee I really loveee youuuu bachhaa .. and now 2026 humne abhi 2nd year complete Kiya he hamare relationship ka and now abhi hamara third year chalu ho gya he and here we with new yearrrr 2026 happy New year chalo sath me or ek year msttt rete heee pyaar seeee andd ye year me hummm enjoy krte heee and sath me rete he loyal playfull likeee kids and ohkiee mera bachha And sorryyy agar mene aapko hurt kiyaaa ye year me aage bhi krunga 🥹.. mera kaam he voo theek he so but don't worry kabhi chordh ke nai jaunga ohkieee chalo chalo pura letter padho meraa and khush ho jaoo bachuuu hamare friendship ko 3 years ho gye he or hamare relationship ko 2 year hihihihihi new year me hamara new 3rd year start krte he ohkie bubu 💕 ❤️
+
+      Heyaaaa bubuuu merii ladduu 💕 happyyyyy newww yearrrr babeeee 💞
+      hehehehehehehehe hihihihi i want to tell youu smthing smthin likee
+      I really loveee youuuu bachhaa .. and now 2026 humne abhi 2nd year
+      complete Kiya he hamare relationship ka and now abhi hamara third
+      year chalu ho gya he and here we with new yearrrr 2026 happy New year
+      chalo sath me or ek year msttt rete heee pyaar seeee andd ye year me
+      hummm enjoy krte heee and sath me rete he loyal playfull likeee kids
+      and ohkiee mera bachha And sorryyy agar mene aapko hurt kiyaaa ye year
+      me aage bhi krunga 🥹.. mera kaam he voo theek he so but don't worry
+      kabhi chordh ke nai jaunga ohkieee chalo chalo pura letter padho meraa
+      and khush ho jaoo bachuuu hamare friendship ko 3 years ho gye he or
+      hamare relationship ko 2 year hihihihihi new year me hamara new 3rd
+      year start krte he ohkie bubu 💕 ❤️
     </p>
   </div>
 </div>
 
-<button class="btn-modern bottom-btn" onclick="goPage('final.html')">THANK YOU</button>
+<!-- Button -->
+<button class="btn-modern bottom-btn" onclick="goPage('final.html')">
+  THANK YOU
+</button>
 
+<!-- Background Music -->
 <audio id="bgMusic" loop preload="auto">
   <source src="assets/music/background.mp3" type="audio/mpeg">
 </audio>
 
 <script src="js/script.js"></script>
+
+<!-- Start video AFTER page loads -->
+<script>
+  window.addEventListener("load", () => {
+    const video = document.querySelector(".bg-video");
+    if (video) {
+      video.play().catch(() => {});
+    }
+  });
+</script>
+
 </body>
 </html>
