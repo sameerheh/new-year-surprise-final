@@ -10,11 +10,10 @@
 
 <!-- Background Video (Render Safe) -->
 <video
-  class="bg-video"
+  class="bg-video hidden-video"
   muted
   playsinline
-  preload="metadata"
-  poster="assets/images/hello-kitty/kitty1.gif"
+  preload="auto"
 >
   <source src="assets/video/love-video.mp4" type="video/mp4">
 </video>
@@ -61,6 +60,25 @@
     if (video) {
       video.play().catch(() => {});
     }
+  });
+</script>
+<script>
+  window.addEventListener("load", () => {
+    const video = document.querySelector(".bg-video");
+    if (!video) return;
+
+    video.addEventListener("canplay", () => {
+      video.classList.remove("hidden-video");
+      video.classList.add("video-visible");
+      video.play().catch(() => {});
+    });
+
+    // safety fallback
+    setTimeout(() => {
+      video.classList.remove("hidden-video");
+      video.classList.add("video-visible");
+      video.play().catch(() => {});
+    }, 1200);
   });
 </script>
 

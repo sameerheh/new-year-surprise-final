@@ -27,3 +27,20 @@ body{height:100vh;overflow:hidden;}
 .letter-paper{background:rgba(10,10,20,0.8);padding:30px;border-radius:12px;border:2px solid rgba(255,255,255,0.15);}
 .letter-font{font-family:cursive;color:#e8e8e8;font-size:20px;line-height:1.6;}
 .bottom-btn{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;}
+
+/* Prevent flash of previous page content */
+.page3 {
+  background: black;
+}
+
+/* Hide video until ready */
+.hidden-video {
+  opacity: 0;
+}
+
+/* Smooth fade-in when video starts */
+.video-visible {
+  opacity: 1;
+  transition: opacity 1.2s ease-in;
+}
+
